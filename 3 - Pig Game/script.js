@@ -1,4 +1,5 @@
 'use strict';
+var scores, currentScore, activePlayer, state;
 
 const player0El = document.querySelector('.player--0');
 const score0El = document.getElementById('score--0');
@@ -13,8 +14,6 @@ const diceEl = document.querySelector('.dice');
 const btnNewGame = document.querySelector('.btn--new');
 const btnRollDice = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
-
-var scores, currentScore, activePlayer, state;
 
 const initializeGame = function () {
   scores = [0, 0];
@@ -79,9 +78,6 @@ const handleHold = function () {
     }
   }
 };
-
 btnNewGame.addEventListener('click', handleNewGame);
-
 btnRollDice.addEventListener('click', handleRollDice);
-
 btnHold.addEventListener('click', handleHold);
